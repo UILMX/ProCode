@@ -7,7 +7,6 @@
     <title>代码转图片</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="http://mxskr.top/templets/lmx/html2canvas.js"></script>
-
 </head>
 
 <body>
@@ -15,13 +14,12 @@
         <div class="transBox">
             <textarea id="wenbenyu" class="transTextarea" placeholder="请粘贴天猫后台产品参数代码" onkeydown="enter_btn(event.keyCode)"></textarea>
         </div>
-    
+
         <div id="iFo" style="width: 749px;"></div>
     </div>
-    
 
-    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1593026339997&di=e1cfc6e8a9f8db0c787a563932f860ab&imgtype=0&src=http%3A%2F%2Fclubimg.club.vmall.com%2Fdata%2Fattachment%2Fforum%2F202005%2F10%2F161306ezx1twbo9feunedj.jpg"
-        alt="文档背景" class="canshuBg">
+
+    <img src="http://mxskr.top/templets/lmx/images/wallpaper/mac2.jpg" alt="文档背景" class="canshuBg">
 
     <button class="add_btn1 button" id="addBtn">
         <p class="btn_tips">生成</p>
@@ -63,7 +61,7 @@
         <p><strong>4.</strong>生成的标题可识别生产编码</p>
     </div>
     <style>
-        .docDsc{
+        .docDsc {
             position: fixed;
             width: 250px;
             top: 25px;
@@ -73,23 +71,26 @@
             box-shadow: 17px 17px 73px rgba(82, 71, 50, 30);
             padding: 0 40px 0 10px;
         }
-        .docDsc p{
-            text-indent:-20px;
+        
+        .docDsc p {
+            text-indent: -20px;
             font-size: 20px;
             color: black;
             font-weight: lighter;
             margin-left: 40px;
             line-height: 36px;
-            font-family:Microsoft YaHei;
+            font-family: Microsoft YaHei;
             letter-spacing: 2px;
         }
-        .docDsc h3{
+        
+        .docDsc h3 {
             font-size: 22px;
             color: black;
             font-weight: 600;
             text-indent: 18px;
-            font-family:Microsoft YaHei;
+            font-family: Microsoft YaHei;
         }
+        
         .transTextarea {
             border-radius: 10px;
             width: 710px;
@@ -109,13 +110,15 @@
             left: 10px;
             transition: .5s all;
         }
-        @media(max-width: 1000px){
-            .transTextarea{
+        
+        @media(max-width: 1000px) {
+            .transTextarea {
                 width: 350px;
             }
         }
-        @media(max-width: 600px){
-            .transTextarea{
+        
+        @media(max-width: 600px) {
+            .transTextarea {
                 width: 80%;
                 top: 0;
                 bottom: 0;
@@ -124,20 +127,20 @@
                 margin: auto;
             }
         }
-
-        #transBox{
+        
+        #transBox {
             width: 1560px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 1rem;
         }
-
+        
         #iFo {
             border-radius: 10px;
             overflow: hidden;
             margin-top: 13px;
         }
-
+        
         .btn_tips {
             position: absolute;
             bottom: -40px;
@@ -145,21 +148,21 @@
             right: 0;
             margin: auto;
         }
-
+        
         @keyframes cover {
             50% {
                 left: 278px;
             }
         }
-
+        
         #svg_10 {
             transition: 0.5s all;
         }
-
+        
         .add_btn1:hover #svg_10 {
             fill: #3ea740;
         }
-
+        
         .canshuBg {
             width: 100%;
             height: 100%;
@@ -168,7 +171,7 @@
             left: 0;
             z-index: -100;
         }
-
+        
         .warning {
             position: fixed;
             top: 50px;
@@ -178,7 +181,7 @@
             box-shadow: 17px 17px 73px rgba(82, 71, 50, 30);
             padding: 0 40px 0 10px;
         }
-
+        
         .btn_box {
             position: fixed;
             display: flex;
@@ -186,7 +189,7 @@
             left: 848px;
             z-index: 100;
         }
-
+        
         .add_btn {
             width: 100px;
             height: 100px;
@@ -202,7 +205,7 @@
             margin: 10px;
             position: relative;
         }
-
+        
         .add_btn1 {
             width: 100px;
             height: 100px;
@@ -220,22 +223,22 @@
             right: 75px;
             bottom: 60px;
         }
-
+        
         input {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             outline: none;
         }
-
+        
         textarea::-webkit-input-placeholder {
             opacity: 0.5;
         }
-
+        
         input::-webkit-input-placeholder {
             opacity: 0.5;
         }
-
+        
         .icon {
             background-color: white;
             padding: 8px;
@@ -251,66 +254,68 @@
             /* svg溢出显示 */
             transition: .5s all;
         }
-
+        
         .addBtnClick {
             background-color: rgb(52, 83, 52);
         }
-
+        
         .add_btn:hover {
             transform: scale(1.02);
             background-color: rgb(52, 83, 52);
         }
-
+        
         .moveRect {
             fill: #5182c2;
             transition: 0.5s all;
         }
-
+        
         .moveRect2 {
             fill: #5182c2;
             transition: 1s all;
         }
-
+        
         .add_btn1:hover {
             transform: scale(1.02);
             background-color: rgb(167, 54, 54);
         }
-
         /* 隐藏滚动条样式 兼容chrome safari ie10+ firefox*/
-
+        
         .element::-webkit-scrollbar {
             width: 0 !important
         }
-
+        
         .element {
             -ms-overflow-style: none;
         }
-
+        
         .element {
             overflow: -moz-scrollbars-none;
         }
-
         /* textarea的focus无边框 */
-
+        
         textarea:focus {
             border: none;
             outline: none;
             box-shadow: none;
         }
-
+        
         textarea::-webkit-scrollbar {
             width: 10px;
             background-color: rgba(0, 0, 0, 0);
         }
-        textarea::-webkit-scrollbar-thumb{
+        
+        textarea::-webkit-scrollbar-thumb {
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.8);
-            cursor: url('cursor.cur'),not-allowed;;
+            cursor: url('cursor.cur'), not-allowed;
+            ;
             transition: 1s all;
         }
-        textarea::-webkit-scrollbar-thumb:hover{
+        
+        textarea::-webkit-scrollbar-thumb:hover {
             background-color: rgba(255, 255, 255, 1);
         }
+        
         textarea::-webkit-input-placeholder {
             color: white;
             font-weight: lighter;
@@ -321,7 +326,7 @@
     <!-- 逻辑层 -->
 
 
-    <script >
+    <script>
         var newImg = "";
         var iFo;
         var prdCode;
@@ -341,7 +346,7 @@
             html2canvas(docObj, {
                 allowTaint: true,
                 taintTest: false,
-                onrendered: function (canvas) {
+                onrendered: function(canvas) {
                     canvas.id = "mycanvas";
                     //生成base64图片数据    
                     var dataUrl = canvas.toDataURL();
@@ -349,13 +354,13 @@
                     newImg.src = dataUrl;
                     //渲染到页面
                     // document.body.appendChild(newImg);
-                    var imgUri = canvas.toDataURL("image/jpeg",1.0).replace("image/jpeg","image/octet-stream"); // 获取生成的图片的url 
+                    var imgUri = canvas.toDataURL("image/jpeg", 1.0).replace("image/jpeg", "image/octet-stream"); // 获取生成的图片的url 
                     var saveLink = document.createElement('a');
                     saveLink.href = imgUri;
                     //淘宝后台源代码绑定了id
                     //saveLink.download = $("#div1 p ").text()+".png ";
                     //淘宝后台源代码未绑定id
-                    $.each($("p"), function (i, n) {
+                    $.each($("p"), function(i, n) {
                         if ($(n).text() == "生产编码") {
                             prdCodeFather = $(n).next();
                             prdCodeFather.attr('id', 'div1');
@@ -364,37 +369,39 @@
                     });
                     // alert(prdCodeFather);
                     // alert(prdCode);
-                    saveLink.download =  prdCode +".jpg";
+                    saveLink.download = prdCode + ".jpg";
                     // saveLink.download = "生成的详情参数.jpg";
                     saveLink.click();
                 }
             });
         }
+
         function enter_btn(a) {
-            if(a==13){
+            if (a == 13) {
                 // alert('你点击了回车键')
                 prdImg(event);
             }
         }
+
         function output() {
             $("#iFo").html(iFo);
             if (iFo == '') {
                 alert('请粘贴天猫参数表代码哦！')
             } else {
-                    $.each($("div"), function (i, n) {
+                $.each($("div"), function(i, n) {
                     if ($(n).css("width") == "790px") {
                         $(n).attr('id', 'total');
-                        $("#iFo").css("width","791px");
+                        $("#iFo").css("width", "791px");
                         // alert($(n).attr("id"));
                     }
                     if ($(n).css("width") == "750px") {
-                        $("#iFo").css("width","751px");
+                        $("#iFo").css("width", "751px");
                         $(n).attr('id', 'total');
                         // alert($(n).attr("id"));
                     }
                 });
             }
-            
+
         };
     </script>
 </body>
