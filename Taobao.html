@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOFAS-天猫</title>
+    <title>淘宝参数工具</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 </head>
@@ -236,7 +236,7 @@
     </div>
 
     <!-- 这里以下不用复制（按钮模块）不用复制不用复制不用复制不用复制不用复制不用复制 -->
-    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590985830851&di=52ced51ba2b0e9e3f8c5241a7b5c646b&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201503%2F16%2F185602etd848yutd9uyt88.jpg" alt="文档背景" class="canshuBg">
+    <img src="http://mxskr.top/templets/lmx/images/wallpaper/mac2.jpg" alt="文档背景" class="canshuBg">
     <div id="logo">
         <p class="comLogo">完成</p>
         <!-- <div style="position: fixed;right: 80px;bottom: 80px;width: 120px;height: 50px;overflow: hidden;opacity: 0.8;">
@@ -284,6 +284,9 @@
         /* logo动画 */
         /* .bottomblock {
             animation: cover 2s infinite;
+        } */
+        /* body {
+            background-color: #191a1b;
         } */
         
         .comLogo {
@@ -400,7 +403,7 @@
             left: 850px;
             background-color: white;
             border-radius: 10px;
-            box-shadow: 17px 17px 73px rgba(82, 71, 50, 30);
+            box-shadow: 17px 17px 73px rgba(0, 0, 0, 0.5);
             padding: 0 40px 0 10px;
         }
         
@@ -833,63 +836,9 @@
             gg();
         });
 
-        // function saveAs(){
-        //     if(frame.readyState!="complete"){
-        //         //'Saveas'表示打开“文件另存为”对话框命令
-        //         frame.document.execCommand('SaveAs');
-        //         clearInterval(timer)
-        //     }
-        // } 
-        // $('#skuShowBox').click(function(){
-        //     console.log(321321321);
-        // })
-        // 最尾部的length获取焦点时，显示保存按钮
-        // var tIndex = $('textarea').length;
-        // $($('textarea')[tIndex - 1]).click(function() {
-        //     $("#addBtn").show();
-        //     alert(tIndex)
-        // });
-        //var pinchuan = "";
-        //$("#input1").focus(function() {
-        // this.setAttribute("value", "");
-        // var newValue = document.getElementById('input').innerHTML;
-        //}).blur(function() {
-        // var newValue = document.getElementById('input').innerHTML;
-        // this.setAttribute("value", "newValue");
-        // for (var i = 1; i < 3; i++) {
-        //  }
-        //});
-        // $("#addBtn").click(function() {
-        //     for (var i = 1; i < 3; i++) {
-        //         pinchuan = "#input" + i;
-        //         var value1 = $(pinchuan)[0].value;
-        //         var str = '<textarea style="font-size: 20px;color: #474440;font-weight: lighter;opacity: 0.8;font-family:Microsoft YaHei;margin: 0 0 0 28px;border: none;padding: 0 0 20px 0;width: 160px;resize:none;" type="text" value="' + value1 + '"></textarea>';
-        //         $("#div1")[0].innerHTML = "";
-        //         $("#div1").append(str);
-        //         console.log(value1);
-        //     }
-        // });
-        // $("#addBtn").click(function() {
-        //     $("#addBtn").addClass('addBtnClick') //点击后按钮的样式
-        //     for (var i = 1; i < 10; i++) {
-        //         var value1 = $("#input" + i).val();
-        //         var str = '<div style="font-size: 20px;color: #474440;font-weight: lighter;opacity: 0.8;font-family:Microsoft YaHei;margin: 0 0 0 28px;border: none;width: 160px;">' + value1 + '</div>';
-        //         $("#div" + i).html("");
-        //         $("#div" + i).append(str);
-        //         console.log(value1);
-        //     }
-        // });
-        // $("#input").focus(function() {
-        //     if (!!!$(this).prop("readonly")) {
-        //         $(this).prop("placeholder", "")
-        //     }
-        // });
-        // $("#input").blur(function() {
-        //     $(this).prop("placeholder", arrplaceholder[$(this).index()])
-        // });
 
 
-
+        //旧版参数导入新版
         var OldTata;
         var getOld = $('#getOld').html();
         // alert(getOld);
@@ -906,32 +855,26 @@
                     // alert($('#input1').val());
                 };
                 if ($(n).text() == "主要材质") {
-                    // alert($(n).next().text())
                     var getItemData = $(n).next().children().text();
                     $('#input2').val(getItemData);
                 };
                 if ($(n).text() == "主要工艺") {
-                    // alert($(n).next().text())
                     var getItemData = $(n).next().children().text();
                     $('#input3').val(getItemData);
                 };
-                if ($(n).text() == "光源颜色") {
-                    // alert($(n).next().text())
+                if ($(n).text() == "光源颜色" || $(n).text() == "颜色") {
                     var getItemData = $(n).next().children().text();
                     $('#input4').val(getItemData);
                 };
                 if ($(n).text() == "光源规格") {
-                    // alert($(n).next().text())
                     var getItemData = $(n).next().children().text();
                     $('#input5').val(getItemData);
                 };
-                if ($(n).text() == "吸顶盘") {
-                    // alert($(n).next().text())
+                if ($(n).text() == "吸顶盘" || $(n).text() == "底座尺寸") {
                     var getItemData = $(n).next().children().text();
                     $('#input6').val(getItemData);
                 };
-                if ($(n).text() == "吊杆长度") {
-                    // alert($(n).next().text())
+                if ($(n).text() == "吊杆长度" || $(n).text() == "吊线长度") {
                     var getItemData = $(n).next().children().text();
                     $('#input8').val(getItemData);
                 };
@@ -940,42 +883,32 @@
         $('#OldToNew2').click(function() {
             var getOldData = $('.OldCodePaste').val();
             $('#getOld').html(getOldData);
-            // alert(getOld);
             $.each($("td"), function(i, n) {
-                // alert($(n));
                 if ($(n).text() == "生产编码") {
-                    // alert($(n).next().text())
                     var getItemData = $(n).next().text();
                     $('#input1').val(getItemData);
-                    // alert($('#input1').val());
                 };
                 if ($(n).text() == "主要材质") {
-                    // alert($(n).next().text())
                     var getItemData = $(n).next().text();
                     $('#input2').val(getItemData);
                 };
                 if ($(n).text() == "主要工艺") {
-                    // alert($(n).next().text())
                     var getItemData = $(n).next().text();
                     $('#input3').val(getItemData);
                 };
-                if ($(n).text() == "光源颜色") {
-                    // alert($(n).next().text())
+                if ($(n).text() == "光源颜色" || $(n).text() == "颜色") {
                     var getItemData = $(n).next().text();
                     $('#input4').val(getItemData);
                 };
                 if ($(n).text() == "光源规格") {
-                    // alert($(n).next().text())
                     var getItemData = $(n).next().text();
                     $('#input5').val(getItemData);
                 };
-                if ($(n).text() == "吸顶盘") {
-                    // alert($(n).next().text())
+                if ($(n).text() == "吸顶盘" || $(n).text() == "底座尺寸") {
                     var getItemData = $(n).next().text();
                     $('#input6').val(getItemData);
                 };
-                if ($(n).text() == "吊杆长度") {
-                    // alert($(n).next().text())
+                if ($(n).text() == "吊杆长度" || $(n).text() == "吊线长度") {
                     var getItemData = $(n).next().text();
                     $('#input8').val(getItemData);
                 };
